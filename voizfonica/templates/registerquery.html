@@ -1,0 +1,37 @@
+{% extends 'customer.html' %}
+{% block myContent %}
+
+   
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4"></div>
+        <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+            
+            <form action="http://127.0.0.1:8000/voizfonica/addquery/" method="post">
+            <table class="table">
+                <table class="borderless">
+                    <h2>Contact Us</h2>
+                    <tr>
+                        <td> Name </td>
+                        <td><input name="name" type="text" class="form-control" required></td>
+                    </tr>
+              <tr>
+                  <td>Mobile Number</td>
+                  <td><input name="mobile" type="text" class="form-control" required></td>
+              </tr>
+              <tr>
+                  <td>Message</td>
+                  <td><textarea name="message" class="form-control" id="" cols="30" rows="10"></textarea></td>
+              </tr>
+             
+                <td></td>
+                <td>
+                <center> <Button class="btn btn-success">Submit</Button> </center></td>
+            </tr>
+            </table>
+        </form>
+        </div>
+        <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4"></div>
+    </div>
+</div>
+{% endblock %}

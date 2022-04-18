@@ -1,0 +1,38 @@
+{% extends 'customer.html' %}
+{% block myContent %}
+    <div class="container">
+        <div class="row">
+            <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+            <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+                <table class="table table-striped">
+                    <center><h3 style="color:black;"  ><strong>POSTPAID PLANS</strong></h3></center>
+                <thead>
+                    <tr>
+                        <th>PRICE</th>
+                        <th>CALLS</th>
+                        <th>DATA</th>
+                        <th>MESSAGES </th>
+                        <th>OFFERS</th>
+                        <th>BUY PLAN</th>
+                      
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in data %}
+                    <tr>
+                        <td>{{i.price}}</td>
+                        <td>{{i.calls}}</td>
+                        <td>{{i.data }}</td>
+                        <td>{{i.messages}}</td>
+                        <td>{{i.offers}}</td>
+                        <td><form action="../postpaidbroughtplan/" method="post"><input name="id" type="hidden" value="{{i.id}}" ><button class="btn btn-danger">BUY PLAN</button></form></td>
+                    {% endfor %}
+                </tbody>
+                </table>
+            </div>
+            <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+        </div>
+    </div>
+
+{% endblock %}
+

@@ -1,0 +1,155 @@
+{% extends 'adminview.html' %}
+
+{% block myContent %}
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col col-12 col sm-2 col cd-2 col lg-2 col xl-2 col xxl-2"></div>
+
+        <div class="col col-12 col sm-8 col cd-8 col lg-8 col xl-8 col xxl-8">
+
+<!-- <form action="http://127.0.0.1:8000/voizfonica/update_postpaidplan/" method="POST">
+
+            <table class="table table-borderless">
+
+                <center><h2>UPDATE POSTPAID PLANS</h2></center>
+
+                <tr>
+
+                    <td>PRICE</td>
+
+                    <td><input name="price" placeholder="Enter the Update Price" type="text" class="form-control"></td>
+
+                </tr>
+
+                <tr>
+
+                    <td></td>
+
+                    <td><button type="Submit" class="class btn btn-warning">SEARCH</button></td>
+
+                </tr>
+
+            </table>
+
+</form> -->
+
+{%if data%}
+
+<form action="http://127.0.0.1:8000/voizfonica/updateReadpostbuy/" method="POST">
+
+<table class="table table-borderless">
+
+    {% for i in data %}
+
+    <tr>
+        <td></td>
+        <td><input  name="newid" value="{{i.id}}" type="hidden" class="form-control"></td>
+    </tr>
+
+    <tr>
+        <!-- <td><strong><font size="3" style="font-family:Verdana;"  >DATE</font></strong></td>
+        <td><input name="date"  type="datetime-local" class="form-control"></td> -->
+        <td><font size="3" style="font-family:Verdana;"  >DATE</font></td>
+        <td>
+            
+            <input name="newdate" type="text" id="currentDateTime" class="form-control">
+            <br><br>
+            <script>
+            var today = new Date();
+            var date =today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear();
+            var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+            var dateTime = date+'  ,  '+time;
+            document.getElementById("currentDateTime").value = dateTime;
+            </script>
+
+        </td>
+    </tr>
+
+    <tr>
+        <td>MOBILE NUMBER</td>
+        <td><input  name="newmobilenumber" value="{{i.mobilenumber}}" type="text" class="form-control"></td>
+    </tr>
+
+    <tr>
+        <td>PRICE</td>
+        <td><input  name="newprice" value="{{i.price}}" type="text" class="form-control"></td>
+    </tr>
+
+   
+
+    <tr>
+
+    <tr>
+        <td>CALLS</td>
+        <td><input name="newcalls" value="{{i.calls}}" type="text" class="form-control"></td>
+    </tr>
+
+    <tr>
+        <td>DATA</td>
+        <td><input name="newdata" value="{{i.data}}" type="text" class="form-control"></td>
+    </tr>
+
+    <tr>
+        <td>EXTRA DATA</td>
+        <td><input  name="newedata" value="{{i.edata}}" type="text" class="form-control"></td>
+    </tr>
+
+
+    <tr>
+        <td>MESSAGES</td>
+        <td><input  name="newmessages" value="{{i.messages}}" type="text" class="form-control"></td>
+    </tr>
+
+    <tr>
+        <td>EXTRA MESSAGES</td>
+        <td><input  name="newemessages" value="{{i.emessages}}" type="text" class="form-control"></td>
+    </tr>
+
+    <tr>
+        <td>EXTRA PRICE(INR)</td>
+        <td><input  name="neweprice" value="{{i.eprice}}" type="text" class="form-control"></td>
+    </tr>
+
+    <tr>
+        <td>TOTAL BILL</td>
+        <td><input  name="newtprice" value="{{i.tprice}}" type="text" class="form-control"></td>
+    </tr>
+
+
+    <tr>
+        <td>OFFERS </td>
+        <td><input name="newoffers" value="{{i.offers}}" type="text" class="form-control"></td>
+    </tr>
+
+    
+
+
+    <tr>
+        <td></td>
+        <td><button type="Summit" class="btn btn-success">USAGE</button></td>
+    </tr>
+
+    
+
+{% endfor %}
+
+</table>
+
+</form>
+
+</div>
+
+ 
+
+{% endif %}
+
+<div class="col col-12 col sm-2 col cd-2 col lg-2 col xl-2 col xxl-2"></div>
+
+</div>
+
+</div>
+
+{% endblock %} 

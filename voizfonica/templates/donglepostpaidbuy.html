@@ -1,0 +1,140 @@
+<html>
+<head>
+<title> VoizFonica: Prepaid | Prepaidpaid Service in India </title>
+
+
+<link href="/static/cssv/airtel2.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<div class="head">
+   
+	<div>
+		<p> <font size="30">VoizFonica</font> <sup><font size="5">4G</font></sup><td width="10%"> 
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		
+			<img src="/static/img/logo.jpg" width="100" height="80">  </td></p> 
+		<b>Express your life with VoizFonica 4G... </b>
+		
+	</div>
+</div>
+<hr color="red">
+<div class="middle">
+	<div class="middle_up">
+    
+		<div class="middle_up_left">
+            <li>
+				<br>
+                <br>
+                <br>
+				<font size="60px">Buy <br></font>
+				<font color="crimpson">Postpaid Dongle Plan</font> <br>
+							
+					<br>
+					&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<img src="/static/img/prepaid-icon.png">
+		</div>
+
+      <br>
+        <div class="menu">
+            <div>
+                <ul>
+              
+                
+              <li><a style="text-decoration:none;color:white" href="http://127.0.0.1:8000/voizfonica/prepaidviewonly/" ><strong>PREPAID PLANS</strong></a></li>
+              <!-- <li><a style="text-decoration:none;color:white" href="http://127.0.0.1:8000/voizfonica/prepaidviewonly/" ><strong>POSTPAID PLANS</strong></a></li> -->
+             
+                    
+                    <li><a style="text-decoration:none;color:white" href="http://127.0.0.1:8000/voizfonica/dongleprepaidviewonly/" > <strong>DONGLE PREPAID PLAN</strong></a> </li>
+              
+                    <li> <a style="text-decoration:none;color:white" href="../contactus/" ><strong>GET HELP</strong></a> </li>
+             
+              <li><a style="text-decoration:none;color:white" href="http://127.0.0.1:8000/voizfonica/home/"><strong>HOME</strong></a></li>
+                   
+                    
+                </ul>
+            </div>
+        </div>
+
+    {%if data%}
+<form action="http://127.0.0.1:8000/voizfonica/donglepostpaidbroughtplan_page/" method="POST">
+<table class="table table-borderless">
+    {% for i in data %}
+    <tr>
+        <td>MOBILE NUMBER</td>
+        <td><input  name="mobilenumber"  type="text" class="form-control"></td>
+    </tr>
+    <tr>
+        <td>PRICE</td>
+        <td><input name="price" value="{{i.price}}" type="text" class="form-control"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input name="eprice" type="hidden" class="form-control"></td>
+    </tr>
+    <tr>
+        <td>DATA</td>
+        <td><input name="data" value="{{i.data}}" type="text" class="form-control"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input name="edata" type="hidden" class="form-control"></td>
+    </tr>
+    <tr>
+        <td>OFFERS </td>
+        <td><input name="offers" value="{{i.offers}}" type="text" class="form-control"></td>
+    </tr>
+    <!-- <tr>
+        <td>DATE </td>
+        <td><input name="date" value="{{i.offers}}" type="date" class="form-control"></td>
+    </tr> -->
+    <tr>
+        <!-- <td><strong><font size="3" style="font-family:Verdana;"  >DATE</font></strong></td>
+        <td><input name="date"  type="datetime-local" class="form-control"></td> -->
+        <td><font size="3" style="font-family:Verdana;"  >DATE</font></td>
+        <td>
+            
+            <input name="date" type="text" id="currentDateTime">
+            <br><br>
+            <script>
+            var today = new Date();
+            var date =today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear();
+            var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+            var dateTime = date+'  ,  '+time;
+            document.getElementById("currentDateTime").value = dateTime;
+            </script>
+
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        
+        <td> <br> <br> <center><button  ><font color="crimpson" size="4" > <strong>BUY PLAN</strong> </font></button></center> 
+            <font color="#428bca" face="freestyle script" size="7px">
+            
+            </font></tr>
+    </tr>
+    
+{% endfor %}
+</table>
+</form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script> 
+
+<!-- <div class="bot">
+	<div>
+		&copy 2021 VoizFonica, All Right Reserved ,Site designed & developed by TEAM D
+	</div>
+</div> -->
+
+{% endif %}
+</body>
+</html>
+
+
+
+
+

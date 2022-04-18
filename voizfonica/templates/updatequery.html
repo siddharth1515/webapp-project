@@ -1,0 +1,47 @@
+{% extends 'adminview.html' %}
+{% block myContent %}
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col sm-2 col cd-2 col lg-2 col xl-2 col xxl-2"></div>
+        <div class="col col-12 col sm-8 col cd-8 col lg-8 col xl-8 col xxl-8">
+
+{%if data%}
+<form action="http://127.0.0.1:8000/voizfonica/updatereadquery/" method="POST">
+<table class="table table-borderless">
+    {% for i in data %}
+    <tr>
+        <td></td>
+        <td><input name="newid" value="{{i.id}}" type="hidden" class="form-control"></td>
+    </tr>
+    <tr>
+        <td>NAME</td>
+        <td><input name="newname" value="{{i.name}}" type="text" class="form-control"></td>
+    </tr>
+    <tr>
+        <td>MOBILE NUMBER</td>
+        <td><input  name="newmobile" value="{{i.mobile}}" type="text" class="form-control"></td>
+    </tr>
+    <tr>
+        <td>MESSAGE</td>
+        <td><input name="newmessage" value="{{i.message}}" type="text" class="form-control"></td>
+    </tr>
+    <tr>
+        <td>SOLUTION</td>
+        <td><input placeholder="We Will Get Back To You Soon, Sorry For Inconvinience!!" name="newreplymessage" value="{{i.replymessage}}" type="text" class="form-control"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><button type="Summit" class="btn btn-success">UPDATE</button></td>
+    </tr>
+    {% endfor %}
+</table>
+</form>
+</div>
+
+{% endif %}
+<div class="col col-12 col sm-2 col cd-2 col lg-2 col xl-2 col xxl-2"></div>
+</div>
+</div>
+{% endblock %} 
+
+

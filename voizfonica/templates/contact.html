@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <link rel="stylesheet" href="/static/img/contact.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     #contBtn {
+    position: relative;
+    top: 1.5em;
+    text-decoration: none;
+    background:rgb(7, 157, 216);
+    color: #fff;
+    margin: auto;
+    padding: .8em 3em;
+    -webkit-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.21);
+    -moz-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.21);
+    box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.21);
+    border-radius: 25px;
+    -webkit-transition: all .4s ease;
+          -moz-transition: all .4s ease;
+          -o-transition: all .4s ease;
+          transition: all .4s ease;
+  }
+  
+  #contBtn:hover {
+    -webkit-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.41);
+    -moz-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.41);
+    box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.41);
+    -webkit-transition: all .4s ease;
+          -moz-transition: all .4s ease;
+          -o-transition: all .4s ease;
+          transition: all .4s ease;
+  }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <h1 class="brand"><span>VoizFonica Telecom</span></h1>
+    
+        <div class="wrapper">
+    
+            <!-- COMPANY INFORMATION -->
+            <div class="company-info">
+                <h3><strong>VoizFonica Telecom</strong></h3>
+    
+                <ul>
+                    <li><i class="fa fa-road"></i> <strong>ADDRESS : <br></strong>      44 Pune Main Street</li>
+                    <li><i class="fa fa-phone"></i> <strong>PHONE : <br> </strong>     (+91) 9425171349</li>
+                    <li><i class="fa fa-envelope"></i> <strong>WEBSITE : <br> </strong>     VoizFonica.com</li>
+                    <li><i class="fa fa-envelope"></i> <strong>EMAIL-ID : <br></strong>     voizfonica@gmail.com</li>
+                    <br>
+                    <hr>
+                    <center><a href="http://127.0.0.1:8000/voizfonica/faq/" id="contBtn">FAQ's</a></center>
+                </ul>
+            <!-- </div>
+            <a href="" id="contBtn">Download Bill</a>
+            </div> -->
+            </div>
+            <!-- End .company-info -->
+      
+            <!-- CONTACT FORM -->
+             <div class="contact">
+                    <section class="section2"> 
+           
+            <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+            <div class="contmap" style='overflow:hidden;height:400px;width:100%;'>
+                <br>
+                <div id='gmap_canvas' style='height:100%;width:100%;'></div>
+                <div>
+                    <small>
+                        <a href="http://embedgooglemaps.com">									embed google maps							</a>
+                    </small>
+                </div>
+                <div>
+                    <small>
+                        <a href="http://freedirectorysubmissionsites.com/">free web directories</a>
+                    </small>
+                </div>
+                <style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div>
+                <script type='text/javascript'>function init_map(){var myOptions = {zoom:14,center:new google.maps.LatLng(19.075314480255834,72.88153973865361),mapTypeId: google.maps.MapTypeId.ROADMAP};
+                map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+                marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(19.075314480255834,72.88153973865361)});
+                infowindow = new google.maps.InfoWindow({content:'<strong>My Location</strong><br>PUNE<br>'});
+                google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});
+                infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
+                </script>
+        </section>
+       
+ 
+            </div>
+            <!-- End .contact -->
+    
+        </div>
+        <!-- End .wrapper -->
+    </div>
+    <!-- End .container -->
+    <a href="http://127.0.0.1:8000/voizfonica/home/" class="close"></a>
+</body>
+</html>

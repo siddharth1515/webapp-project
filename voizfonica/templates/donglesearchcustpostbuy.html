@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+    rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet"  href="/static/background css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> VoizFonica: Prepaid | Postpaid Service in India </title>
+<link href="/static/cssv/airtel1.css" rel="stylesheet" type="text/css">
+    <style>
+        table {
+            margin-left: auto; 
+            margin-right: auto;
+            width: 100%; 
+            border-collapse: collapse;
+            border-spacing: 0 10cm;
+        }
+  
+        td {
+            border-collapse: collapse;
+            text-align: center;
+            padding: 100px;
+            height: 100px;
+        }
+  
+        tr {
+            background-color:#dfd9d9;
+        }
+        h3 {
+            background-color:whitesmoke;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="head">
+        
+        <div>
+            <img draggable="false" class="brand" src="/static/6th.png" alt="airtel" width="9%" height="5%">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                
+                   
+                </div>
+    </div>
+   
+    <div class="menu">
+        <div>
+           
+            <ul>
+          
+            
+          <li><a  style="text-decoration:none;color:white"href="http://127.0.0.1:8000/voizfonica/prepaidviewonly/" ><strong>PREPAID PLANS</strong></a></li>
+         
+                <li><a  style="text-decoration:none;color:white"href="http://127.0.0.1:8000/voizfonica/postpaidviewonly/" ><strong>POSTPAID PLANS</strong></a> </li>
+                <li><a  style="text-decoration:none;color:white"href="http://127.0.0.1:8000/voizfonica/dongleprepaidviewonly/" > <strong>DONGLE PREPAID PLAN</strong></a> </li>
+          <li><a  style="text-decoration:none;color:white"href="http://127.0.0.1:8000/voizfonica/donglepostpaidviewonly/" > <strong>DONGLE POSTPAID PLAN</strong></a> </li>
+                <li> <a  style="text-decoration:none;color:white"href="../aboutus/" ><strong>ABOUT US</strong></a> </li>
+                <li> <a  style="text-decoration:none;color:white"href="../contactus/" ><strong>GET HELP</strong></a> </li>
+          <!-- <li><a  style="text-decoration:none;color:white"href="http://127.0.0.1:8000/voizfonica/logincustomerview/" >LOGIN</a></li> -->
+          <li><a  style="text-decoration:none;color:white"href="http://127.0.0.1:8000/voizfonica/dashboardview/"><strong>BACK</strong></a></li>
+          <!-- <li><a  style="text-decoration:none;color:white"href="http://127.0.0.1:8000/voizfonica/dashboardview/">BACK</a></li> -->
+             
+                
+            </ul>
+        </div>
+    </div>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col sm-2 col cd-2 col lg-2 col xl-2 col xxl-2"></div>
+        <div class="col col-12 col sm-8 col cd-8 col lg-8 col xl-8 col xxl-8">
+<form action="http://127.0.0.1:8000/voizfonica/donglesearchapipostpaidcustbuy/" method="POST">
+            <table class="table table-striped">
+                <center><h2>SEARCH BILL</h2></center>
+                <tr>
+                    <td><font color="black">MOBILE NUMBER</font></td>
+                    <td><input required name="mobilenumber" placeholder="Enter The Search Mobile  Number" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="Submit" class="class btn btn-warning">Search</button></td>
+                </tr>
+            </table>
+</form>
+{%if data%}
+<table class="table table-striped">
+    {% for i in data %}
+        <tr>
+            <td>DATE </td>
+            <td>{{i.date}}</td>
+        </tr>
+
+        <tr>
+            <td>MOBILE NUMBER</td>
+            <td>{{i.mobilenumber}}</td>
+        </tr>
+        <tr>
+            <td>PRICE</td>
+            <td>{{i.price}}</td>
+        </tr>
+       
+        <tr>
+            <td>DATA</td>
+            <td>{{i.data}}</td>
+        </tr>
+        <tr>
+            <td>EXTRA DATA </td>
+            <td>{{i.edata}}</td>
+        </tr>
+        <tr>
+            <td>EXTRA PRICE</td>
+            <td>{{i.eprice}}</td>
+        </tr>
+        <tr>
+            <td>TOTAL BILL</td>
+            <td>{{i.tprice}}</td>
+        </tr>
+        
+        <tr>
+            <td>OFFERS </td>
+            <td>{{i.offers}}</td>
+        </tr>
+       
+      
+
+            <tr>
+                <td ></td>
+                <td><a href='http://127.0.0.1:8000/voizfonica/successdonglebuy/'>
+                    <button class="btn btn-secondary">
+                        PAY BILL
+                    </button>
+                </a></td>
+                </tr>
+        {% endfor %}
+    </table>
+    </div>
+    {% endif %}
+    <div class="col col-12 col sm-2 col cd-2 col lg-2 col xl-2 col xxl-2"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <link rel="stylesheet" href="/static/cssv/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script src="/static/cssv/style.js"></script>
+  <div class="option">
+    <div class="logo">
+      <br>
+      <div class="dashboto-log">
+      
+      </div>
+      <!-- <p class="logo rog"></p> -->
+      <p class="logo"> <strong>VoizFonica</strong>  </p>
+      <img src="/static/6th.png" width="95" height="60">
+      <!-- <p class="logo">VoizFonica </p> -->
+    </div>
+    <p class="tagline">Helping you with your Connectivity <bold></bold> to the Moon!</p>
+    {% if request.session.uname %}
+    <button class="main">Hello!! {{request.session.uname}} </button>
+   
+    {% endif %}
+    <!-- {% for i in  customer_serialize.data %}
+    <img src='{{i.profilephoto}}' width="40px" class="img-responsive">
+    {% endfor %} -->
+      <div class="clear"></div>
+        <ul class="menu">
+       
+          
+          <!-- <i class="fa fa-dashboard"></i>
+          PREPAID
+         -->
+         <style>
+          .dropdown {
+            position: relative;
+            display: inline-block;
+          }
+          
+          .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 12px 16px;
+            z-index: 1;
+          }
+          
+          .dropdown:hover .dropdown-content {
+            display: block;
+          }
+          </style>
+      <br>
+          
+          <div class="dropdown">
+            <span><h3 style="color:rgb(74, 160, 194);"><strong>PREPAID</strong></h3></span>
+            <div class="dropdown-content">
+              <p> <a style="color: black;"   href="http://127.0.0.1:8000/voizfonica/prepaidviewonlylogin/">PLANS</a>  </p>
+            
+              <p> <a style="color: black;"   href="http://127.0.0.1:8000/voizfonica/prepaidviewonlylogin/">RECHARGE</a>  </p>
+            </div>
+          </div>
+        
+        
+       
+        <br>
+         <br>
+          <div class="dropdown">
+            <span><h3 style="color:rgb(74, 160, 194);"><strong>POSTPAID</strong></h3></span>
+            <div class="dropdown-content">
+              <p> <a style="color: black; font-size: small; " f   href="http://127.0.0.1:8000/voizfonica/postpaidviewonlylogin/">PLANS</a>  </p>
+            
+              <p> <a style="color: black; font-size: small;"   href="http://127.0.0.1:8000/voizfonica/mysearchpostcustbuy/">PAY MOBILE BILL</a>  </p>
+              <p> <a style="color: black; font-size: small;"   href="http://127.0.0.1:8000/voizfonica/donglemysearchpostcustbuy/">PAY DONGLE BILL</a>  </p>
+            </div>
+          </div>
+        
+        <br>
+        <br>
+        
+          <div class="dropdown">
+            <span> <h3 style="color:rgb(74, 160, 194);" ><strong>DONGLE</strong></h3> </span>
+            <div class="dropdown-content">
+            <p> <a style="color: black; font-size:small;"  href="http://127.0.0.1:8000/voizfonica/dongleprepaidviewonlylogin/">PREPAID DONGLE</a>  </p>
+            
+            <p> <a style="color: black; font-size: small;"  href="http://127.0.0.1:8000/voizfonica/donglepostpaidviewonlylogin/">POSTPAID DONGLE</a>  </p>
+            </div>
+          </div>
+      <br>
+      <br>
+      
+       
+      <div class="dropdown">
+        <span> <h3 style="color:rgb(74, 160, 194);" ><strong>SUPPORT</strong></h3> </span>
+        <div class="dropdown-content">
+        <p> <a style="color: black; font-size: small;" href="http://127.0.0.1:8000/voizfonica/registerquery/">RAISE QUERY</a>  </p>
+        <p> <a style="color: black; font-size: small;" href="http://127.0.0.1:8000/voizfonica/searchquery/">QUERY STATUS</a>  </p>
+        <p> <a style="color: black; font-size: small;" href="http://127.0.0.1:8000/voizfonica/faq/">FAQ's</a>  </p>
+        <p> <a style="color: black; font-size: small;"  href="../contactuslogin/">CONTACT US</a>  </p>
+        </div>
+      </div>
+      <br>
+        
+          <div class="dropdown">
+            <span><a href="http://127.0.0.1:8000/voizfonica/logout/"><h4 style="color: crimson" > <strong>LOG OUT</strong></h4></a> </span>
+           
+          </div>
+       
+      </ul>
+    </div>
+    
+    
+    <div class="dashboard-heading">
+      <div class="panel">
+        <!-- <i class="fa fa-bell"><bold>1</bold></i> -->
+        <div ng-app="app" ng-controller="coin">
+      <p class="btc-price">{{priceGBP}}</p>
+    </div>
+      </div>
+      <div class="all">
+        <div class="starter-stats">
+          <div class="blok">
+            <i class="fa fa-money"></i>
+            <div class="no">
+            <p>Plan Type</p>
+            <!-- {% if request.session.uname %}
+            <p>{{request.session.uname}} </p>
+            {% endif %} -->
+            <p>PREPAID</p>
+              </div>
+          </div>
+          
+          <div class="blok">
+            <i class="fa fa-money kl"></i>
+            <div class="no">
+            <p>Total Balance</p>
+            <p>34 days left</p>
+              </div>
+          </div>
+          
+          <div class="blok">
+            <i class="fa fa-money pl"></i>
+            <div class="no">
+            <p>History</p>
+            <p>Recharged 30 days ago</p>
+              </div>
+          </div>
+        
+          <div class="blok">
+            
+            <i class="fa fa-money pl"></i>
+            <div class="no">
+            <p>Data Left</p>
+            <p>750MB</p>
+              </div>
+          </div>
+          <div class="blok">
+            <i class="fa fa-money sl"></i>
+            <div class="no">
+            <p>Messages Left</p>
+            <p>30 left</p>
+              </div>
+          </div>
+          <div class="blok">
+            <i class="fa fa-money kl"></i>
+            <div class="no">
+            <p>Calls</p>
+            <p>Unlimited Calls</p>
+              </div>
+          </div>
+          <div class="clear"></div>
+            <div class="gains">
+              <img draggable="false" class="brand" src="/static/mobile.png" alt="voizfonica" width="28%" height="16%">
+              <img draggable="false" class="brand" src="/static/6th.png" alt="voizfonica" width="70%" height="60%">
+              
+            </div>
+          
+        </div>
+        
+      </div>
+      
+    </div>
+    
+</body>
+</html>

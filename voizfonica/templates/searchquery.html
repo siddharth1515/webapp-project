@@ -1,0 +1,47 @@
+{% extends 'customer.html' %}
+{% block myContent %}
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col sm-2 col cd-2 col lg-2 col xl-2 col xxl-2"></div>
+        <div class="col col-12 col sm-8 col cd-8 col lg-8 col xl-8 col xxl-8">
+<form action="http://127.0.0.1:8000/voizfonica/searchqueryapi/" method="POST">
+            <table class="table table-striped">
+                <center><h3 style="color:black;"  ><strong> QUERY STATUS</strong></h3></center>
+                <tr>
+                    <td><font color="black">MOBILE NUMBER</font></td>
+                    <td><input name="mobile" placeholder="Enter the Mobile number" type="number" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="Submit" class="class btn btn-danger">Check</button></td>
+                </tr>
+            </table>
+</form>
+{%if data%}
+<table class="table table-striped">
+    {% for i in data %}
+        <tr>
+            <td>NAME</td>
+            <td>{{i.name}}</td>
+        </tr>
+        <tr>
+            <td>MOBILE NUMBER</td>
+            <td>{{i.mobile}}</td>
+        </tr>
+        <tr>
+            <td>MESSAGE</td>
+            <td>{{i.message}}</td>
+        </tr>
+        <tr>
+            <td>REPLY MESSAGE </td>
+            <td>{{i.replymessage}}</td>
+        </tr>
+        
+        {% endfor %}
+    </table>
+    </div>
+    {% endif %}
+    <div class="col col-12 col sm-2 col cd-2 col lg-2 col xl-2 col xxl-2"></div>
+        </div>
+    </div>
+    {% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'adminview.html' %}
+{% block myContent %}
+<style>
+   
+    .container{
+        background-color: white;
+        width: 40%;
+    }
+    
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4"></div>
+        <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+            
+            <form action="http://127.0.0.1:8000/voizfonica/add_donglepostpaidplans/" method="post">
+            <table class="table">
+                <table class="borderless">
+                    <h4> <strong>DONGLE PREPAID PLANS</strong></h4>
+                    <tr>
+                        <td> PRICE </td>
+                        <td><input name="price" type="text" class="form-control" required></td>
+                    </tr>
+                    <tr>
+                        <td>DATA</td>
+                        <td><input name="data" type="text" class="form-control" required></td>
+                    </tr>
+                    
+             
+              
+              <tr>
+                  <td>OFFERS</td>
+                  <td><input name="offers" type="text" class="form-control" required></td>
+              </tr>
+            <tr>
+                <td></td>
+                <td>
+                <center> <Button class="btn btn-success">Submit</Button> </center></td>
+            </tr>
+            </table>
+        </form>
+        </div>
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+    </div>
+</div>
+{% endblock %}

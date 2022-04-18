@@ -1,0 +1,44 @@
+{% extends 'adminview.html' %}
+{% block myContent %}
+<style>
+    .container{
+     background-color: white;
+     width: 80%;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+        <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+            <table class="table table-striped">
+                <center><h3><strong>DONGLE PREPAID PLANS</strong></h3></center>
+            <thead>
+                <tr>
+                    <th> PRICE</th>
+                    <th>DATA</th>
+                    <th>VALIDITY</th>
+                    <th>OFFERS</th>
+                    <th>DELETE</th>
+                    <th>UPDATE</th>
+                  
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in data %}
+                <tr>
+                    <td>{{i.price}}</td>
+                    <td>{{i.data}}</td>
+                    <td>{{i.validity}}</td>
+                    
+                    <td>{{i.offers}}</td>
+                    <td><form action="../dongledeletereadprepaidplans/" method="post"><input name="newid" type="hidden" value="{{i.id}}" class="form-control" ><button class="btn btn-secondary">DELETE</button></form></td>
+                    <td><form action="../dongleupdate_prepaidplans/" method="post"><input name="newid" type="hidden" value="{{i.id}}" class="form-control" ><button class="btn btn-secondary">UPDATE</button></form></td>
+ 
+                {% endfor %}
+            </tbody>
+            </table>
+        </div>
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+    </div>
+</div>
+{% endblock %}

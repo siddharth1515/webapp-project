@@ -1,0 +1,91 @@
+{% extends 'adminview.html' %}
+{% block myContent %}
+<style>
+  #nav1{
+      background-color: white;
+  }
+  .background{
+      background-color: whitesmoke;
+      width: 100%;
+  }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+        <div class="col col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+           <form action="http://127.0.0.1:8000/voizfonica/update_search_api/" method="post">
+            <table class="background">
+                <tr>
+                    <td><h6>MOBILE NO</h6></td>
+                    <td><input name="Newnumber" placeholder="ENTER MOBILE NO TO UPDATE" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><center><button type="submit" class="btn btn-outline-secondary">SEARCH</button></center></td>
+                </tr>
+            </table>
+           </form>
+           {% if data %}
+           <div id="nav1">
+           <form action="http://127.0.0.1:8000/voizfonica/update_api/" method="post">
+            <table class="table table-borderless">
+                  {% for i in data %}
+                  <tr>
+                       <td></td>
+                       <td><input name="newid" value="{{i.id}}" type="hidden" class="form-control"></td>
+                   </tr>
+                    <tr>
+                        <td>CUSTOMER NAME</td>
+                        <td><input name="newcname" value="{{i.Cname}}" type="text" class="form-control"></td>
+                    </tr>
+                    <tr>
+                     <td>AADHAR</td>
+                     <td><input name="newcadhar" value="{{i.Cadhar}}" type="text" class="form-control"></td>
+                   </tr>
+                   
+                    <tr>
+                        <td>EMAIL ID</td>
+                        <td><input name="newcemail" value="{{i.Cemail}}" type="text" class="form-control"></td>
+                    </tr>
+                     <tr>
+                         <td>ADDRESS</td>
+                         <td><input name="newcaddress" value="{{i.Caddress}}" type="text" class="form-control"></td>
+                     </tr>
+                     <tr>
+                      <td>ALTERNATE MOBILE NO</td>
+                      <td><input name="newalternatemobilenumber" value="{{i.Calternatemobilenumber}}" type="text" class="form-control"></td>
+                    </tr>
+                    <tr>
+                        <td>CUSTOMER TYPE</td>
+                        <td><input name="newtypeofcustomer" value="{{i.Typeofcustomer}}" type="text" class="form-control"></td>
+                      </tr>
+                      <tr>
+                        <td>NEW NUMBER</td>
+                        <td><input name="newcnumber" value="{{i.Newnumber}}" type="text" class="form-control"></td>
+                      </tr>
+
+                      <tr>
+                        <td>PROFILE PHOTO</td>
+                        <td><input name="newprofilephoto" value="{{i.profilephoto}}" type="file" class="form-control"></td>
+                      </tr>
+
+                      <tr>
+                        <td>AADHAR PHOTO</td>
+                        <td><input name="newaadharphoto" value="{{i.aadharphoto}}" type="file" class="form-control"></td>
+                      </tr>
+                  
+                       <tr>
+                       <td></td>
+                       <td> <center> <button type="submit" class="btn btn-outline-secondary">UPDATE</button></center></td>
+                 </tr>
+                  {% endfor %}
+                </table>
+            </form>
+        </div>
+           {% endif %}
+        </div>
+        <div class="col col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
+    </div>
+</div>
+     
+{% endblock %}

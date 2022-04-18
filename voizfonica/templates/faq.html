@@ -1,0 +1,200 @@
+
+    <!-----CodingHindi-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <link rel="stylesheet"        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300&display=swap" rel="stylesheet">
+    <style>
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size:12px;
+
+}
+.fondo{
+    width:100%;
+    height:100%;
+    /* background:linear-gradient(hsl(273,75%,66%), hsl(240, 73%,65%)); */
+    background-color: skyblue;
+    padding:130px 0;
+}
+.cuerpo{
+    width:85%;
+    background:white;
+    border-radius:20px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:0 15px 30px 15px;
+}
+.img{
+    width:200px;
+    position:relative;
+    top: -90px;
+    filter: drop-shadow(0 25px 0px #E1D6F6);
+}
+.titulo{
+    text-align:center;
+    color: hsl(238,29%, 16%);
+    font-size:25px;
+    font-weight:700;
+    
+}
+.pregunta{
+    color:hsl(237,12%, 33%);
+    display:inline-block ;
+    font-weight:500;
+    font-size:20px;
+    padding:20px 0;
+}
+.parrafo{
+    color:hsl(240,6%, 50%);
+    line-height:17px;
+    padding-bottom:20px;
+    position:relative;
+    top:-20px;
+    opacity:0;
+    transition:top 1s, opacity 1s;
+    z-index:1;
+    font-size: 15px;
+}
+.lista{
+    list-style:none;
+    
+}
+.item_header{
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items:center;
+    position:relative ;
+    z-index:2;
+    
+}
+.item{
+    border-bottom:1px solid #E6E6E9;
+}
+.icon{
+    color: hsl(14,88%,65%);
+    transition:transform 1s;
+}
+li{
+   height:54px;
+   overflow:hidden;
+   transition:all 1s;
+   
+}
+
+.active > .item_header> .pregunta{
+    font-weight:bold;
+   
+}
+.active > .item_header> .icon{
+    transform: rotate(180deg);
+    
+}
+.active> .parrafo{
+    opacity:1;
+    top:0;
+}
+    </style>
+    </head>
+    <body>
+        <div class= "fondo">
+            <div class= "cuerpo">
+                <img src="https://raw.githubusercontent.com/luamoris/react-faq-card-info/a8bb6248c30bae08f077566df122ac83c23a3532/src/img/illustration-woman-online-desktop.svg" class= "img">
+                
+                <div class="texto">
+                    <h3 class= "titulo">FAQ's</h3>
+                    <ul class= "lista">
+                        <li class= "item">
+                            <div class= "item_header">
+                                <h4 class= "pregunta">How many team members can I invite?</h4>
+                                <i class= "fa fa-angle-down icon"></i>
+                            </div>
+                           
+                               <p class= "parrafo">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            
+                        </li>
+                        <li class= "item">
+                            <div class= "item_header">
+                                <h4 class= "pregunta">How many team members can I invite?</h4>
+                                <i class= "fa fa-angle-down icon"></i>
+                            </div>
+                            <p class= "parrafo">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </li>
+                        <li class= "item">
+                            <div class= "item_header">
+                                <h4 class= "pregunta">How many team members can I invite?</h4>
+                                <i class= "fa fa-angle-down icon"></i>
+                            </div>
+                            <p class= "parrafo">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. </p>
+                        </li>
+                        <li class= "item">
+                            <div class= "item_header">
+                                <h4 class= "pregunta">How many team members can I invite?</h4>
+                                <i class= "fa fa-angle-down icon"></i>
+                            </div>
+                            <p class= "parrafo">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </li>
+                        <li class= "item">
+                            <div class= "item_header">
+                                <h4 class= "pregunta">How many team members can I invite?</h4>
+                                <i class= "fa fa-angle-down icon"></i>
+                            </div>
+                            <p class= "parrafo">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </li>
+                        <li class= "item">
+                            <div class= "item_header">
+                                <h4 class= "pregunta">How many team members can I invit?</h4>
+                                <i class= "fa fa-angle-down icon"></i>
+                            </div>
+                            <p class= "parrafo">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div> 
+        <script>
+        document.querySelectorAll(".item_header").forEach(
+        function(header){
+
+        header.addEventListener("click",()=>{
+            if(header.parentNode.classList.contains("active")){
+              header.parentNode.classList.remove("active");
+              header.parentNode.style.height= "54px";
+              
+            }
+            else{
+            document.querySelectorAll(".item_header").forEach(
+            function(header){
+            header.parentNode.classList.remove("active");
+            header.parentNode.style.height= "54px"
+            }
+            )              
+            header.parentNode.classList.add("active");
+            let altPar=header.nextElementSibling.scrollHeight;
+            let altura= altPar+54;
+            header.parentNode.style.height= altura + "px";
+ 
+            }
+            
+        })
+    }
+);
+
+
+
+
+        </script>
+    </body>
+</html>
+  
+

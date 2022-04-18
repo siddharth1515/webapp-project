@@ -1,0 +1,48 @@
+{% extends 'adminview.html' %}
+{% block myContent %}
+<style>
+    .background{
+     background-color: white;
+    }
+</style>
+            
+            <div class="background">
+                <table class="table table-striped table-borderless">
+                    <thead class="table-secondary" >
+                        <tr>
+                            <th style="text-decoration: aqua;">NAME</th>
+                            <th>AADHAR</th>
+                            <th>EMAIL ID</th>
+                            <th>ADDRESS</th>
+                           
+                            <th>TYPE</th>
+                            <th>NEW NUMBER</th>
+                            <th>PROFILE PHOTO</th>
+                            <th>AADHAR PHOTO</th>
+                            
+                        </tr>
+                        
+                    </thead>
+                    <tbody>
+                        {% for i in data %}
+                        <tr>
+                            <td>{{ i.Cname }}</td>
+                            <td>{{ i.Cadhar }}</td>
+                            <td>{{ i.Cemail }}</td>
+                            <td>{{ i.Caddress }}</td>
+                            
+                            <td>{{ i.Typeofcustomer }}</td>
+                            <td>{{ i.Newnumber }}</td>
+                            <td>{{ i.profilephoto }}</td>
+                            <td>{{ i.aadharphoto }}</td>
+                           
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                    
+                </table>
+
+            </div>
+ 
+
+{% endblock %}

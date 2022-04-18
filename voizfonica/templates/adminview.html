@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+    rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet"  href="/static/background css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Admin App</title>
+    
+</head>
+
+<body >
+
+
+<nav class="navbar navbar-expand-lg navbar-dark  ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <img draggable="false" class="brand" src="/static/6th.png" alt="airtel" width="9%" height="5%">
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+       <li class="nav-item dropdown">
+          <a style="color: white;" class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+         <strong> CUSTOMER</strong>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+            <li><a class="dropdown-item" href="../register/"> REGISTER NEW CUSTOMER</a></li>
+            <li><a class="dropdown-item" href="../view/">VIEW ALL CUSTOMER</a></li>
+            <li><a class="dropdown-item" href="../searchview/">SEARCH CUSTOMER</a></li>
+            <li><a class="dropdown-item" href="../update/">UPDATE A CUSTOMER</a></li>
+            <li><a class="dropdown-item" href="../delete/">DELETE  CUSTOMER</a></li>
+            
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a style="color: white;"  class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           <strong>PREPAID PLANS</strong>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+            <li><a class="dropdown-item" href="http://127.0.0.1:8000/voizfonica/prepaidplans/">ADD PREPAID PLANS</a></li>
+            <li><a class="dropdown-item" href="http://127.0.0.1:8000/voizfonica/viewallprepaidplans/">VIEW PREPAID PLANS</a></li>
+            <li><a class="dropdown-item" href="http://127.0.0.1:8000/voizfonica/deleteprepaidplans/">DELETE PREPAID PLANS</a></li>
+            <!-- <li><a class="dropdown-item" href="http://127.0.0.1:8000/voizfonica/updateprepaidplans/">UPDATE PREPAID PLANS</a></li> -->
+            </ul>
+            <li class="nav-item dropdown">
+              <a style="color: white;"  class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <strong>POSTPAID PLANS</strong>
+              </a>
+              
+              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+            <li><a class="dropdown-item" href="http://127.0.0.1:8000/voizfonica/postpaidplans/"> ADD POSTPAID PLAN</a></li>
+              <li><a class="dropdown-item" href="http://127.0.0.1:8000/voizfonica/viewallpostpaidplans/">VIEW POSTPAID PLAN</a></li>
+              <!-- <li><a class="dropdown-item" href="http://127.0.0.1:8000/voizfonica/deletepostpaidplans/">DELETE POSTPAID PLAN</a></li> -->
+              <!-- <li><a class="dropdown-item" href="http://127.0.0.1:8000/voizfonica/updatepostpaidplans/">UPDATE POSTPAID PLAN</a></li> -->
+              </ul>
+              <li class="nav-item dropdown">
+                <a style="color: white;"  class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <strong> DONGLE PLANS</strong>
+                </a>
+                
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item" href="http://127.0.0.1:8000/voizfonica/dongleprepaidplans/">ADD PREPAID DONGLE PLAN</a></li>
+              <li><a class="dropdown-item" href="http://127.0.0.1:8000/voizfonica/dongleviewallprepaidplans/">VIEW PREPAID DONGLE PLAN</a></li>
+              <!-- <li><a class="dropdown-item" href="http://127.0.0.1:8000/voizfonica/dongledeleteprepaidplans/">DELETE PREPAID DONGLE PLAN</a></li> -->
+              <!-- <li><a class="dropdown-item" href="http://127.0.0.1:8000/voizfonica/dongleupdateprepaidplans/">UPDATE PREPAID DONGLE PLAN</a></li> -->
+              
+              <li><a class="dropdown-item" href="http://127.0.0.1:8000/voizfonica/donglepostpaidplans/">ADD POSTPAID DONGLE PLAN</a></li>
+              <li><a class="dropdown-item" href="http://127.0.0.1:8000/voizfonica/dongleviewallpostpaidplans/">VIEW POSTPAID DONGLE PLAN</a></li>
+              <!-- <li><a class="dropdown-item" href="http://127.0.0.1:8000/voizfonica/dongledeletepostpaidplans/">DELETE POSTPAID DONGLE PLAN</a></li> -->
+              <!-- <li><a class="dropdown-item" href="http://127.0.0.1:8000/voizfonica/dongleupdatepostpaidplans/">UPDATE POSTPAID DONGLE PLAN</a></li> -->
+        </ul>
+        </li>
+        <li class="nav-item dropdown">
+            <a style="color: white;"  class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+             <strong> QUERIES</strong>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <!-- <li><a class="dropdown-item" href="http://127.0.0.1:8000/voizfonica/registerquery/"> ADD QUERY</a></li> -->
+              <li><a class="dropdown-item" href="http://127.0.0.1:8000/voizfonica/viewallqueries/">VIEW ALL QUERY</a></li>
+              <!-- <li><a class="dropdown-item" href="http://127.0.0.1:8000/voizfonica/deletequery/">DELETE ALL QUERY</a></li> -->
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a style="color: white;"  class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+             <strong>BILLS</strong>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item" href="../myviewallpostpaidplansbuy/"> CALCULATE MOBILE BILL USAGE  </a></li>
+              <li><a class="dropdown-item" href="../mysearchpostbuy/"> GENERATE MOBILE BILL</a></li>
+              <li><a class="dropdown-item" href="../myviewallpostpaidplansbuydongle/"> CALCULATE DONGLE BILL USAGE</a></li>
+              <li><a class="dropdown-item" href="../donglemysearchpostbuy/"> GENERATE DONGLE BILL</a></li>
+              <li><a class="dropdown-item" href="../customeremail/">EMAIL BILL</a></li>
+              <!-- <li><a class="dropdown-item" href="http://127.0.0.1:8000/voizfonica/deletequery/">DELETE ALL QUERY</a></li> -->
+            </ul>
+          </li>
+          <a style="color: white;"  class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/voizfonica/logoutadmin/" style="color: black;"><strong>LOGOUT</strong></a>
+       </div>
+  </div>
+</nav>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+</html>
+<br>
+{% block myContent %} 
+
+
+{% endblock %}

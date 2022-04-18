@@ -1,0 +1,66 @@
+{% extends 'adminview.html' %}
+{% block myContent %}
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col sm-2 col cd-2 col lg-2 col xl-2 col xxl-2"></div>
+        <div class="col col-12 col sm-8 col cd-8 col lg-8 col xl-8 col xxl-8">
+<form action="http://127.0.0.1:8000/voizfonica/update_prepaidplan/" method="POST">
+            <table class="table table-borderless">
+                <center><h2>UPDATE PREPAID PLANS</h2></center>
+                <tr>
+                    <td>PRICE</td>
+                    <td><input required name="price" placeholder="Enter the Update Price" type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="Submit" class="class btn btn-warning">SEARCH</button></td>
+                </tr>
+            </table>
+</form>
+{%if data%}
+<form action="http://127.0.0.1:8000/voizfonica/updatereadprepaidplans/" method="POST">
+<table class="table table-borderless">
+    {% for i in data %}
+    <tr>
+        <td></td>
+        <td><input name="newid" value="{{i.id}}" type="hidden" class="form-control"></td>
+    </tr>
+    <tr>
+        <td>PRICE</td>
+        <td><input name="newprice" value="{{i.price}}" type="text" class="form-control"></td>
+    </tr>
+    <tr>
+        <td>CALLS</td>
+        <td><input  name="newcalls" value="{{i.calls}}" type="text" class="form-control"></td>
+    </tr>
+    <tr>
+        <td>VALIDITY</td>
+        <td><input name="newvalidity" value="{{i.validity}}" type="text" class="form-control"></td>
+    </tr>
+    <tr>
+        <td>DATA</td>
+        <td><input name="newdata" value="{{i.data}}" type="text" class="form-control"></td>
+    </tr>
+    <tr>
+        <td>MESSAGES</td>
+        <td><input  name="newmessages" value="{{i.messages}}" type="text" class="form-control"></td>
+    </tr>
+    <tr>
+        <td>OFFERS </td>
+        <td><input name="newoffers" value="{{i.offers}}" type="text" class="form-control"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><button type="Summit" class="btn btn-success">UPDATE</button></td>
+    </tr>
+    
+{% endfor %}
+</table>
+</form>
+</div>
+
+{% endif %}
+<div class="col col-12 col sm-2 col cd-2 col lg-2 col xl-2 col xxl-2"></div>
+</div>
+</div>
+{% endblock %} 

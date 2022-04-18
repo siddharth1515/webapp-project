@@ -1,0 +1,74 @@
+{% extends 'adminview.html' %}
+
+{% block myContent %}
+<style>
+    .background{
+     background-color: white;
+     width: 100%;
+    }
+</style>
+
+<div class="background">
+
+    
+
+            <table class="table table-striped">
+
+                <center><h3><strong>POSTPAID PLANS</strong></h3></center>
+
+            <thead>
+
+                <tr>
+
+                    
+                    <th>MOBILE NUMBER</th>
+                    <th>PRICE</th>
+                    <th>CALLS</th>
+                    <th>DATA</th>
+                    <th>EXTRA DATA</th>
+                    <th>MESSAGES </th>
+                    <th>EXTRA MESSAGES </th>
+                    <th>EXTRA PRICE </th>
+                    <th>TOTAL BILL</th>
+                    <th>OFFERS</th>
+                    <th>USAGE</th>
+
+                  
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                {% for i in data %}
+
+                <tr>
+                    <td>{{i.mobilenumber}}</td>
+                    <td>{{i.price}}</td>
+                    <td>{{i.calls}}</td>
+                    <td>{{i.data }}</td>
+                    <td>{{i.edata }}</td>
+                    <td>{{i.messages}}</td>
+                    <td>{{i.emessages}}</td>
+                    <td>{{i.eprice}}</td>
+                    <td>{{i.tprice}}</td>
+                    <td>{{i.offers}}</td>
+                   
+
+                    <td><form action="../updatesearchpostbuy/"  method="post"><input name="id" type="hidden" value="{{i.id}}" class="form-control" ><button class="btn btn-secondary">USAGE</button></form></td>
+
+ 
+
+                {% endfor %}
+
+            </tbody>
+
+            </table>
+
+      
+
+</div>
+
+{% endblock %}
+
